@@ -56,6 +56,18 @@ const [toAddress, setToAddress] = useState({
 
   const handleDownload = async () => {
     try {
+
+        // 1️⃣ Show SweetAlert loading
+    Swal.fire({
+      title: "Generating PDF...",
+      text: "Please wait while your invoice is being generated.",
+      allowOutsideClick: false,
+      allowEscapeKey: false,
+      didOpen: () => {
+        Swal.showLoading();
+      },
+    });
+
       const input = invoiceRef.current;
 
       // 1. Render with higher quality
@@ -97,6 +109,17 @@ const [toAddress, setToAddress] = useState({
 
       // 5. Save
       pdf.save(invoiceNo + ".pdf");
+
+       // 4️⃣ Close the SweetAlert loading
+    Swal.close();
+
+    // 5️⃣ Optional: Show success message
+    Swal.fire({
+      icon: "success",
+      title: "Success",
+      text: "Your PDF has been downloaded.",
+    });
+    
     } catch (error) {
       console.error("Error generating PDF:", error);
       Swal.fire({
