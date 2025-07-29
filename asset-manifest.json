@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/invoice-dci/static/css/main.f97d55fc.css",
+    "main.js": "/invoice-dci/static/js/main.94b22ddc.js",
+    "static/js/977.249ef776.chunk.js": "/invoice-dci/static/js/977.249ef776.chunk.js",
+    "static/js/732.4c9ecac9.chunk.js": "/invoice-dci/static/js/732.4c9ecac9.chunk.js",
+    "static/js/453.a3c1d153.chunk.js": "/invoice-dci/static/js/453.a3c1d153.chunk.js",
+    "static/media/Image_20250729_140101.jpeg": "/invoice-dci/static/media/Image_20250729_140101.52fd3e8fb36a26fdbeed.jpeg",
+    "static/media/logo.png": "/invoice-dci/static/media/logo.49353f8aecd039a5ee1f.png",
+    "index.html": "/invoice-dci/index.html",
+    "main.f97d55fc.css.map": "/invoice-dci/static/css/main.f97d55fc.css.map",
+    "main.94b22ddc.js.map": "/invoice-dci/static/js/main.94b22ddc.js.map",
+    "977.249ef776.chunk.js.map": "/invoice-dci/static/js/977.249ef776.chunk.js.map",
+    "732.4c9ecac9.chunk.js.map": "/invoice-dci/static/js/732.4c9ecac9.chunk.js.map",
+    "453.a3c1d153.chunk.js.map": "/invoice-dci/static/js/453.a3c1d153.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f97d55fc.css",
+    "static/js/main.94b22ddc.js"
+  ]
+}
