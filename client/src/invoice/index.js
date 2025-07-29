@@ -60,7 +60,7 @@ const [toAddress, setToAddress] = useState({
 
       // 1. Render with higher quality
       const canvas = await html2canvas(input, {
-        scale: 2,
+        scale: 4,
         useCORS: true,
         allowTaint: true,
         timeout: 3000,
@@ -96,7 +96,7 @@ const [toAddress, setToAddress] = useState({
       );
 
       // 5. Save
-      pdf.save("invoice.pdf");
+      pdf.save(invoiceNo + ".pdf");
     } catch (error) {
       console.error("Error generating PDF:", error);
       Swal.fire({
