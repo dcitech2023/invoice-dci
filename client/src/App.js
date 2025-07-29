@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import Invoice from './invoice';
+import Invoice from './invoice/index';
 import Header from './layouts/header/Header';
 import History from './history';
 import Swal from 'sweetalert2';
