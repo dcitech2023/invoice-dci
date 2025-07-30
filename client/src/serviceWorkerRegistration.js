@@ -1,5 +1,3 @@
-// This optional code is used to register a service worker to enable PWA features.
-
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
   window.location.hostname === '[::1]' ||
@@ -10,7 +8,7 @@ const isLocalhost = Boolean(
 
 export function register() {
   if ('serviceWorker' in navigator) {
-    const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
+    const swUrl = `/service-worker.js`;
 
     if (isLocalhost) {
       // Running on localhost - check if a service worker exists
