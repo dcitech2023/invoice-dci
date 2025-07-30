@@ -1,11 +1,16 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.png';
+import { FiRefreshCw } from "react-icons/fi"; // ✅ React icon
 
 const Header = () => {
-    const location = useLocation();
+  const location = useLocation();
   const isHistory = location.pathname.includes("/history");
-  // console.log("isHistory", isHistory);
+
+  // ✅ Simple reload function
+  const handleReload = () => {
+    window.location.reload();
+  };
 
   return (
     <nav className="bg-[#2A3547] shadow-md z-[999] fixed top-0 w-full">
@@ -17,14 +22,23 @@ const Header = () => {
             <span className="text-white font-bold text-2xl">Invoice App</span>
           </div>
 
-          {/* Right side - Only History Link */}
-          <div className="hidden md:block">
-              <Link
-                to={isHistory ? "/" : "/history"}
-                className="text-gray-300 hover:bg-[#8AB93A] hover:text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200"
-              >
-                {isHistory ? "Back to Invoice" : "History"}
-              </Link>
+          {/* Right side - History Link + Reload */}
+          <div className="hidden md:flex items-center gap-4">
+            <Link
+              to={isHistory ? "/" : "/history"}
+              className="text-gray-300 hover:bg-[#8AB93A] hover:text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+            >
+              {isHistory ? "Back to Invoice" : "History"}
+            </Link>
+
+            {/* ✅ Reload Icon */}
+            <button
+              onClick={handleReload}
+              className="text-gray-300 hover:text-white"
+              title="Reload"
+            >
+              <FiRefreshCw size={20} />
+            </button>
           </div>
 
           {/* Mobile menu button would go here */}
